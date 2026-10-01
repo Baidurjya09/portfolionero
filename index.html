@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NERO — Digital Creative Studio</title>
+  <meta name="description" content="NERO is a digital creative studio crafting immersive websites, brand experiences, and interactive digital products." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:wght@300;400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">NERO</div>
+      <div class="loader-bar"><div class="loader-progress" id="loaderProgress"></div></div>
+      <div class="loader-count" id="loaderCount">0</div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <a href="#hero">NERO</a>
+    </div>
+    <div class="nav-links">
+      <a href="#work" class="nav-link">Work</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="#contact" class="nav-cta">Let's Talk</a>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <a href="#work" class="mobile-link" data-menu-close>Work</a>
+      <a href="#about" class="mobile-link" data-menu-close>About</a>
+      <a href="#contact" class="mobile-link" data-menu-close>Contact</a>
+    </div>
+    <div class="mobile-menu-footer">
+      <span>nerot90.com</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <canvas id="heroCanvas"></canvas>
+    </div>
+    <div class="hero-blob"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="dot"></span>
+        Digital Creative Studio
+      </div>
+      <h1 class="hero-title">
+        <span class="line" data-reveal>Bold Ideas,</span>
+        <span class="line italic" data-reveal>Brought to <span class="orange">Life.</span></span>
+      </h1>
+      <p class="hero-sub" data-reveal>
+        We design and build immersive digital experiences —<br />
+        websites, brands, and interactive products that demand attention.
+      </p>
+      <div class="hero-actions" data-reveal>
+        <a href="#work" class="btn btn-primary">
+          <span>View Work</span>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#about" class="btn btn-ghost">About Studio</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+    <div class="hero-tag">
+      <span>Available for projects</span>
+      <span class="live-dot"></span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ MARQUEE ═══════════════════════════════ -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>Web Design</span><span class="sep">✦</span>
+      <span>Development</span><span class="sep">✦</span>
+      <span>Brand Identity</span><span class="sep">✦</span>
+      <span>UI / UX</span><span class="sep">✦</span>
+      <span>Motion Design</span><span class="sep">✦</span>
+      <span>E-Commerce</span><span class="sep">✦</span>
+      <span>Real Estate Websites</span><span class="sep">✦</span>
+      <span>3D Experiences</span><span class="sep">✦</span>
+      <span>Web Design</span><span class="sep">✦</span>
+      <span>Development</span><span class="sep">✦</span>
+      <span>Brand Identity</span><span class="sep">✦</span>
+      <span>UI / UX</span><span class="sep">✦</span>
+      <span>Motion Design</span><span class="sep">✦</span>
+      <span>E-Commerce</span><span class="sep">✦</span>
+      <span>Real Estate Websites</span><span class="sep">✦</span>
+      <span>3D Experiences</span><span class="sep">✦</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ WORK ═══════════════════════════════ -->
+  <section class="work" id="work">
+    <div class="section-header">
+      <p class="section-label">Selected Work</p>
+      <h2 class="section-title" data-reveal>Projects that<br /><em>push boundaries.</em></h2>
+    </div>
+
+    <div class="card-stack-container">
+      <!-- Background wash effects -->
+      <div class="stack-bg-top"></div>
+      <div class="stack-bg-bottom"></div>
+      
+      <!-- Card stack stage -->
+      <div class="card-stack-stage" id="cardStackStage" tabindex="0"></div>
+      
+      <!-- Navigation dots -->
+      <div class="stack-navigation" id="stackNavigation"></div>
+    </div>
+
+    <div class="projects-grid" style="display: none;">
+
+      <!-- Project 1 -->
+      <article class="gradient-project-card" data-index="01">
+        <a href="https://rjbrealtors.in" target="_blank" rel="noopener" class="gradient-card-link">
+          <!-- Skewed gradient panels -->
+          <span class="gradient-panel" data-gradient-from="#ffbc00" data-gradient-to="#ff0058"></span>
+          <span class="gradient-blur" data-gradient-from="#ffbc00" data-gradient-to="#ff0058"></span>
+          
+          <!-- Animated blurs -->
+          <span class="blob-container">
+            <span class="blob blob-top"></span>
+            <span class="blob blob-bottom"></span>
+          </span>
+          
+          <!-- Content -->
+          <div class="gradient-card-content">
+            <div class="project-meta">
+              <span class="project-num">01</span>
+              <span class="project-tags">
+                <span class="tag">Real Estate</span>
+                <span class="tag">Web Design</span>
+              </span>
+            </div>
+            <h3 class="project-name">RJB Realtors</h3>
+            <p class="project-desc">Centauri Dharapur — A luxury residential complex in Assam. Full marketing website with floor plans, amenities, RERA compliance and inquiry system.</p>
+            <span class="read-more-btn">
+              <span>View Live</span>
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="gradient-project-card" data-index="02">
+        <a href="https://arjbfarms.in" target="_blank" rel="noopener" class="gradient-card-link">
+          <span class="gradient-panel" data-gradient-from="#03a9f4" data-gradient-to="#ff0058"></span>
+          <span class="gradient-blur" data-gradient-from="#03a9f4" data-gradient-to="#ff0058"></span>
+          <span class="blob-container">
+            <span class="blob blob-top"></span>
+            <span class="blob blob-bottom"></span>
+          </span>
+          <div class="gradient-card-content">
+            <div class="project-meta">
+              <span class="project-num">02</span>
+              <span class="project-tags">
+                <span class="tag">Agriculture</span>
+                <span class="tag">Branding</span>
+              </span>
+            </div>
+            <h3 class="project-name">ARJB Farms</h3>
+            <p class="project-desc">A premium agri-brand digital presence — clean, earthy design language that communicates trust, sustainability and modern farming values.</p>
+            <span class="read-more-btn">
+              <span>View Live</span>
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="gradient-project-card" data-index="03">
+        <a href="https://kdscreation.com" target="_blank" rel="noopener" class="gradient-card-link">
+          <span class="gradient-panel" data-gradient-from="#4dff03" data-gradient-to="#00d0ff"></span>
+          <span class="gradient-blur" data-gradient-from="#4dff03" data-gradient-to="#00d0ff"></span>
+          <span class="blob-container">
+            <span class="blob blob-top"></span>
+            <span class="blob blob-bottom"></span>
+          </span>
+          <div class="gradient-card-content">
+            <div class="project-meta">
+              <span class="project-num">03</span>
+              <span class="project-tags">
+                <span class="tag">E-Commerce</span>
+                <span class="tag">Product Design</span>
+              </span>
+            </div>
+            <h3 class="project-name">KDS Creations</h3>
+            <p class="project-desc">Museum-quality 3D photo frames & bespoke gifting studio. E-commerce storefront with immersive product showcases and custom order flow.</p>
+            <span class="read-more-btn">
+              <span>View Live</span>
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="gradient-project-card featured" data-index="04">
+        <a href="https://nerot90.com" target="_blank" rel="noopener" class="gradient-card-link">
+          <span class="gradient-panel" data-gradient-from="#ff590d" data-gradient-to="#ffbc00"></span>
+          <span class="gradient-blur" data-gradient-from="#ff590d" data-gradient-to="#ffbc00"></span>
+          <span class="blob-container">
+            <span class="blob blob-top"></span>
+            <span class="blob blob-bottom"></span>
+          </span>
+          <div class="featured-badge">Ongoing</div>
+          <div class="gradient-card-content">
+            <div class="project-meta">
+              <span class="project-num">04</span>
+              <span class="project-tags">
+                <span class="tag">Studio Site</span>
+                <span class="tag">Interactive</span>
+              </span>
+            </div>
+            <h3 class="project-name">NERO Studio</h3>
+            <p class="project-desc">Our own digital home — currently in active development. An immersive studio website that represents our craft, values and vision.</p>
+            <span class="read-more-btn">
+              <span>View Live</span>
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Project 5 -->
+      <article class="gradient-project-card" data-index="05">
+        <a href="https://fmv-mkup1.netlify.app" target="_blank" rel="noopener" class="gradient-card-link">
+          <span class="gradient-panel" data-gradient-from="#a855f7" data-gradient-to="#ff0058"></span>
+          <span class="gradient-blur" data-gradient-from="#a855f7" data-gradient-to="#ff0058"></span>
+          <span class="blob-container">
+            <span class="blob blob-top"></span>
+            <span class="blob blob-bottom"></span>
+          </span>
+          <div class="gradient-card-content">
+            <div class="project-meta">
+              <span class="project-num">05</span>
+              <span class="project-tags">
+                <span class="tag">UI Markup</span>
+                <span class="tag">Frontend</span>
+              </span>
+            </div>
+            <h3 class="project-name">FMV Markup</h3>
+            <p class="project-desc">A precision frontend markup project — pixel-perfect HTML/CSS implementation from design files, demonstrating strong development fundamentals.</p>
+            <span class="read-more-btn">
+              <span>View Live</span>
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Project 6 -->
+      <article class="gradient-project-card" data-index="06">
+        <a href="https://stp-1.netlify.app" target="_blank" rel="noopener" class="gradient-card-link">
+          <span class="gradient-panel" data-gradient-from="#06b6d4" data-gradient-to="#3b82f6"></span>
+          <span class="gradient-blur" data-gradient-from="#06b6d4" data-gradient-to="#3b82f6"></span>
+          <span class="blob-container">
+            <span class="blob blob-top"></span>
+            <span class="blob blob-bottom"></span>
+          </span>
+          <div class="gradient-card-content">
+            <div class="project-meta">
+              <span class="project-num">06</span>
+              <span class="project-tags">
+                <span class="tag">UI Markup</span>
+                <span class="tag">Frontend</span>
+              </span>
+            </div>
+            <h3 class="project-name">STP Markup</h3>
+            <p class="project-desc">Clean, structured UI implementation project. Showcasing layout mastery, responsive design, and meticulous attention to detail in code output.</p>
+            <span class="read-more-btn">
+              <span>View Live</span>
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Project 7 -->
+      <article class="gradient-project-card" data-index="07">
+        <a href="https://tw-mkup.netlify.app" target="_blank" rel="noopener" class="gradient-card-link">
+          <span class="gradient-panel" data-gradient-from="#10b981" data-gradient-to="#06b6d4"></span>
+          <span class="gradient-blur" data-gradient-from="#10b981" data-gradient-to="#06b6d4"></span>
+          <span class="blob-container">
+            <span class="blob blob-top"></span>
+            <span class="blob blob-bottom"></span>
+          </span>
+          <div class="gradient-card-content">
+            <div class="project-meta">
+              <span class="project-num">07</span>
+              <span class="project-tags">
+                <span class="tag">UI Markup</span>
+                <span class="tag">TailwindCSS</span>
+              </span>
+            </div>
+            <h3 class="project-name">TW Markup</h3>
+            <p class="project-desc">Tailwind CSS-powered markup build — rapid, utility-first design implementation with a sharp eye for spacing, typography and component structure.</p>
+            <span class="read-more-btn">
+              <span>View Live</span>
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="about-left">
+        <p class="section-label">About Studio</p>
+        <h2 class="section-title" data-reveal>
+          We build digital<br />
+          <em>experiences that</em><br />
+          people remember.
+        </h2>
+        <a href="#contact" class="btn btn-primary mt-4">
+          <span>Start a Project</span>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="about-right">
+        <div class="about-text">
+          <p>
+            NERO is a digital creative studio focused on crafting websites and brand experiences that feel alive. We work at the intersection of design, development and storytelling — turning ideas into immersive digital realities.
+          </p>
+          <p>
+            From luxury real estate platforms and agri-brand identities to e-commerce experiences and interactive markup, we bring the same level of craft and intention to every project — regardless of scale.
+          </p>
+          <p>
+            We believe the web should be bold, beautiful and built to last.
+          </p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <span class="skill-icon">◎</span>
+            <span>Web Design</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-icon">◎</span>
+            <span>Frontend Dev</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-icon">◎</span>
+            <span>UI / UX</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-icon">◎</span>
+            <span>Brand Identity</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-icon">◎</span>
+            <span>Motion Design</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-icon">◎</span>
+            <span>E-Commerce</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-item">
+        <span class="stat-num" data-count="7">0</span>
+        <span class="stat-label">Projects Delivered</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-count="3">0</span>
+        <span class="stat-label">Industries Served</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-count="100">0</span>
+        <span class="stat-label">% Custom Code</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-count="1">0</span>
+        <span class="stat-label">Studio in India</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ PROCESS ═══════════════════════════════ -->
+  <section class="process">
+    <div class="section-header">
+      <p class="section-label">How We Work</p>
+      <h2 class="section-title" data-reveal>Our <em>process.</em></h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <span class="step-num">01</span>
+        <div class="step-content">
+          <h3>Discovery</h3>
+          <p>We dive deep into your brand, goals and audience. Understanding the full picture before a single pixel is placed.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="step-num">02</span>
+        <div class="step-content">
+          <h3>Design</h3>
+          <p>Bold concepts, refined to perfection. We explore multiple directions, then zero in on what makes your brand unforgettable.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="step-num">03</span>
+        <div class="step-content">
+          <h3>Build</h3>
+          <p>Clean, performant code. Every interaction, every animation, every responsive breakpoint — built with intent and precision.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="step-num">04</span>
+        <div class="step-content">
+          <h3>Launch</h3>
+          <p>We handle deployment, final QA and handoff. Your site goes live polished, fast and ready to grow.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <p class="section-label">Get In Touch</p>
+      <h2 class="contact-title" data-reveal>
+        Have a project<br />
+        <em>in mind?</em>
+      </h2>
+      <p class="contact-sub">Let's build something extraordinary together. Drop us a message and we'll get back to you within 24 hours.</p>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="project">Type of Project</label>
+          <select id="project" name="project">
+            <option value="" disabled selected>Select project type</option>
+            <option value="website">Website Design & Development</option>
+            <option value="ecommerce">E-Commerce</option>
+            <option value="branding">Brand Identity</option>
+            <option value="realestate">Real Estate Website</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Tell us about your project</label>
+          <textarea id="message" name="message" rows="5" placeholder="Describe your vision..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          <span>Send Message</span>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </form>
+
+      <div class="contact-links">
+        <a href="https://nerot90.com" target="_blank" rel="noopener" class="contact-link">nerot90.com ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">NERO</div>
+      <div class="footer-tagline">Digital Creative Studio</div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 NERO Studio. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="https://nerot90.com" target="_blank" rel="noopener">nerot90.com ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
